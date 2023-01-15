@@ -1,3 +1,66 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('./Assets/fonts/space-grotesk-v15-latin-regular.woff2') format('woff2'),
+       url('./Assets/fonts/space-grotesk-v15-latin-regular.woff') format('woff'),
+       url('./Assets/fonts/space-grotesk-v15-latin-regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('./Assets/fonts/space-grotesk-v15-latin-500.woff2') format('woff2'),
+       url('./Assets/fonts/space-grotesk-v15-latin-500.woff') format('woff'),
+       url('./Assets/fonts/space-grotesk-v15-latin-500.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('./Assets/fonts/space-grotesk-v15-latin-700.woff2') format('woff2'),
+       url('./Assets/fonts/space-grotesk-v15-latin-700.woff') format('woff'),
+       url('./Assets/fonts/space-grotesk-v15-latin-700.ttf') format('truetype')
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('./Assets/fonts/inter-v12-latin-regular.woff2') format('woff2'),
+       url('./Assets/fonts/inter-v12-latin-regular.woff') format('woff'),
+       url('./Assets/fonts/inter-v12-latin-regular.ttf') format('truetype')
+}
+
+/* inter-500 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('./Assets/fonts/inter-v12-latin-500.woff2') format('woff2'),
+       url('./Assets/fonts/inter-v12-latin-500.woff') format('woff'),
+       url('./Assets/fonts/inter-v12-latin-500.ttf') format('truetype')
+}
+
+/* SF Pro Text Semibold */
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('./Assets/fonts/FontsFree-Net-SFProText-Semibold.woff2') format('woff2'),
+       url('./Assets/fonts/FontsFree-Net-SFProText-Semibold.woff') format('woff'),
+       url('./Assets/fonts/FontsFree-Net-SFProText-Semibold.ttf') format('truetype')
+}
+
 .container {
   width: 100%;
   max-width: 1240px;
