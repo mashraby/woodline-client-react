@@ -1,0 +1,78 @@
+.header {
+  padding: 24px 0px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.item_link {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 1px;
+}
+
+.active {
+  color: #03c3ff;
+  border-bottom: 2px solid #03c3ff;
+}
+
+.btn_group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.order_btn {
+  padding: 16px 56px;
+  background: #03c3ff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  border: none;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.order_modal_btn {
+  position: relative;
+  padding: 16px;
+  border-radius: 8px;
+  filter: drop-shadow(0px 5px 16px rgba(0, 0, 0, 0.1));
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.order_count {
+  position: absolute;
+  top: -15%;
+  right: -15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #ff5959;
+  color: #fff;
+  border-radius: 50%;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
