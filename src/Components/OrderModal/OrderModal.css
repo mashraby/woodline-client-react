@@ -1,0 +1,89 @@
+.order_modal {
+  display: none;
+  padding: 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.order_modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.heading_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order_heading {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+}
+
+.order_modal_count {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #ff5959;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order_close_btn {
+  background-color: #fff;
+  padding: 12px;
+  border: 1.5px solid #bfbfbf;
+  color: #bfbfbf;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filtering_wrapper {
+  margin-bottom: 47px;
+}
+
+.filtering_wrapper form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.filtering_wrapper select {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #bfbfbf;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 312px;
+  /* min-height: 48px; */
+  border: none;
+}
+
+.orders_list {
+  display: flex;
+  gap: 15px;
+}

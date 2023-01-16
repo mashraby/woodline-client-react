@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import bag from "../../Assets/svg/Bag.svg";
 import { NavLink } from "react-router-dom";
+import { OpenModalContext } from "../../Contexts/OrderModalContext/OrderModalContext";
 
 export default function Header() {
+
+  const { setIsOpenModal } = useContext(OpenModalContext)
+
+  const handleOpenModal = () => {
+    setIsOpenModal(true)
+  }
+
   return (
     <header className="header">
       <div className="container">
@@ -25,7 +33,7 @@ export default function Header() {
 
           <div className="btn_group">
             <button className="order_btn">Order</button>
-            <button className="order_modal_btn">
+            <button onClick={() => handleOpenModal()} className="order_modal_btn">
               <span className="order_count">4</span>
               <img className="bag" src={bag} alt="Bag img" width="24" height="24" />
             </button>

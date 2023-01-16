@@ -1,0 +1,91 @@
+.order_card {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 269px;
+  min-height: 316px;
+}
+
+.order_card:hover {
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.order_card_img {
+  margin-bottom: 8px;
+}
+
+.order_card_infos {
+  margin-bottom: 16px;
+}
+
+.card_info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.value {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #8c8c8c;
+}
+
+.property {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.price_property {
+  color: #40a9ff;
+}
+
+.take_btn {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #40a9ff;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.count_btn_wrapper {
+  display: none;
+}
+
+.count_btn {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #262626;
+  border: none;
+  background: #e6f7ff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 75px;
+  min-height: 44px;
+}
+
+.btn_increment {
+    cursor: pointer;
+}
+
+.btn_decrement {
+    cursor: pointer;
+}
