@@ -1,28 +1,21 @@
-import { useContext } from "react";
 import "./App.css";
-import Header from "./Components/Header/Header";
-import OrderModal from "./Components/OrderModal/OrderModal";
-import SearchBar from "./Components/SearchBar/SearchBar";
-import { OpenModalContext } from "./Contexts/OrderModalContext/OrderModalContext";
-import Table from "./Components/Table/Table";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import NotFound from "./Pages/NotFound/NotFound";
+import MyProf from "./Pages/MyProf/MyProf";
+import Login from "./Pages/Login/Login";
 
 
 function App() {
-  const { isOpenModal, setIsOpenModal } = useContext(OpenModalContext)
-
-  const closeModal = () => {
-    setIsOpenModal(false)
-  }
-
   return (
-    <>
-      <Header />
-      <SearchBar />
-      <OrderModal />
-      <div onClick={() => closeModal()} style={isOpenModal===true ? {"display": "block"} : {"display": "none"}} className="backdrop"></div>
-      <Table/>
-
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/myprof" element={<MyProf />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 }
 

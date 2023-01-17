@@ -49,11 +49,13 @@
 
 .order_close_btn {
   background-color: #fff;
-  padding: 12px;
+  padding: 7px 10px;
   border: 1.5px solid #bfbfbf;
   color: #bfbfbf;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .filtering_wrapper {
@@ -79,11 +81,11 @@
   border-radius: 8px;
   width: 100%;
   max-width: 312px;
-  /* min-height: 48px; */
   border: none;
 }
 
 .orders_list {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
