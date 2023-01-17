@@ -1,32 +1,39 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './SearchBar.css'
 import search_icon from "../../Assets/svg/Search.svg"
 
 export default function SearchBar() {
 
-  const activeBtns = (e) => {
-    // if(e.target.matches("my_orders_btn")) {
-    //     this.
-    // }
-    console.log("ok");
-  }
+    const archiveBtn = useRef()
+    const orderBtn = useRef()
+
+    const activeOrders = () => {
+        orderBtn.current.classList.remove("searchbar_btn_active")
+        archiveBtn.current.classList.add("searchbar_btn_active")
+    }
+
+    const activeArchive = () => {
+        archiveBtn.current.classList.remove("searchbar_btn_active")
+        orderBtn.current.classList.add("searchbar_btn_active")
+    }
+
 
   return (
     <div className='searchbar'>
         <div className='container'>
             <div className='searchbar_wrapper'>
-                <div onClick={(e) => activeBtns(e)} className='searchbar_btn_group'>
-                    <button className='my_orders_btn searchbar_btn_active'>
+                <div className='searchbar_btn_group'>
+                    <button ref={orderBtn} onClick={() => activeArchive()} className='my_orders_btn searchbar_btn_active'>
                         My orders
                     </button>
-                    <button className='archive_orders_btn'>
+                    <button ref={archiveBtn} onClick={() => activeOrders()} className='archive_orders_btn'>
                         Archive orders
                     </button>
                 </div>
 
                 <form className='search_form' action="">
                     <div className='input_box'>
-                        <input type="number" placeholder='Search ID' />
+                        <input type="text" placeholder='Search' />
                         <img src={search_icon} alt="search icon" width="24" height="24" />
                     </div>
                 </form>

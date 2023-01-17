@@ -18,7 +18,7 @@ export default function OrderModal() {
           <p className="order_heading">Order</p>
           <span className="order_modal_count">4</span>
         </div>
-        <button onClick={() => closeModal()} className="order_close_btn">x</button>
+        <button onClick={() => closeModal()} className="order_close_btn">&#10005;</button>
       </div>
 
       <div className="filtering_wrapper">
