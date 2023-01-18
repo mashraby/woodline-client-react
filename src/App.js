@@ -8,7 +8,6 @@ import Corzinka from "./Components/Corzinka/Corzinka";
 import Private from "./Routes/Private";
 import Public from "./Routes/Public";
 
-
 function App() {
   return (
     <div className="App">
@@ -17,7 +16,7 @@ function App() {
         <Route path="/" element={<Private />}>
           <Route path="/" element={<Home />} />
           <Route path="/myprof" element={<MyProf />} />
-        <Route path="/corzinka" element={<Corzinka />} />
+          <Route path="/corzinka" element={<Corzinka />} />
 
           <Route path="/*" element={<NotFound />} />
         </Route>
@@ -25,8 +24,7 @@ function App() {
         <Route path="/" element={<Public />}>
           <Route path="/login" element={<Login />} />
         </Route>
-    </Routes>s
-      
+    </Routes>
     </div>
   );
 }
