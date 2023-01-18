@@ -1,0 +1,255 @@
+:root {
+    --font-Space: 'Space Grotesk';
+}
+
+.corzinka {
+    padding-top: 56px;
+}
+
+.corzinka-container {
+    position: relative;
+    z-index: 1000;
+}
+
+.corzinka-header {
+    background: #FFFFFF;
+    border: 1px solid #EDEDED;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 27px;
+    margin-bottom: 16px;
+}
+
+.corzinka-logo {
+    display: flex;
+    align-items: center;
+}
+
+.corzinka-logoImg {
+    margin-right: 11px;
+}
+
+.corzinka-logoText {
+    font-family: var(--font-Space);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.corzinka-idIext {
+    font-family: var(--font-Space);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #8C8C8C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.corzinka-idNum {
+    color: #40A9FF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.corzinka-close {
+    display: flex;
+    align-items: center;
+}
+
+.corzinka-closeText {
+    font-family: var(--font-Space);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #BFBFBF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 11px;
+}
+
+.corzinka-closeBtn {
+    border: 1.5px solid #BFBFBF;
+    background-color: #FFFFFF;
+    color: #BFBFBF;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* CORZINKA CARD */
+.corzinka-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EDEDED;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 32px;
+}
+
+.corzinka-cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.corzinka-cardBody {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.count_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* CORZINKA PRODUCT CARD */
+.corzinka-productCard {
+    position: relative;
+}
+
+.corzinka-productRemove {
+    border: 1.5px solid #F5222D;
+    background-color: #FFFFFF;
+    color: #F5222D;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(45%, -45%);
+    display: none;
+}
+
+.corzinka-productCard:hover .corzinka-productRemove {
+    display: block;
+}
+
+/* CORZINKA CARD FOOTER */
+.corzinka-cardFooter {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.corzinka-cardProductType {
+    display: flex;
+}
+
+.corzinka-cardSelect {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+.corzinka-cardSelect select {
+    width: 243px;
+    height: 44px;
+    padding: 12px 24px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin-bottom: 24px;
+    border: none;
+}
+
+.corzinka-cardPrice p {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #8C8C8C;
+    margin-bottom: 34px;
+}
+
+.corzinka-cardPrice p span {
+    color: #000000;
+    font-weight: 500;
+}
+
+.corzinka-cardTotal {
+    width: 546px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.corzinka-cardTotal-Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.corzinka-cardTotal-Header h3 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+}
+
+.corzinka-cardTotal-Header span {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #389E0D;
+    background: #D9F7BE;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.corzinka-cardTotalPrice {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.corzinka-cardTotalPrice p {
+    margin-right: 60px;
+    margin-bottom: 16px;
+}
