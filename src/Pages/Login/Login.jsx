@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import eye_close from "../../Assets/svg/eye-close.svg";
@@ -6,29 +6,35 @@ import eye_open from "../../Assets/svg/eye-open.svg";
 import "./Login.css";
 
 const Login = () => {
-  const navigate = useNavigate();
   const passInput = useRef();
   const userNameInput = useRef();
   const submitBtn = useRef();
-
+  const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const [wrong, setWrong] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token) {
-      navigate("/dashboard");
-    }
-  }, []);
-
-  
-  
   const SubmitHandler = () => {
-    fetch("http://54.248.131.197:3000/auth/login", {
+    if (username === "") {
+      userNameInput.current.classList.add("error-input")
+      userNameInput.current.placeholder = "username kiritilishi shart!"
+    } else {
+      userNameInput.current.classList.remove("error-input")
+    }
+    if (password === "") {
+      passInput.current.classList.add("error-input")
+      passInput.current.placeholder = "password kiritilishi shart!"
+    } else {
+      passInput.current.classList.remove("error-input")
+    }
+
+    if(username!==""&&password!=="") {
+      setWrong(true)
+    }
+
+    fetch("http://localhost:9000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,15 +46,16 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.access_token) {
-          localStorage.setItem("token", data.access_token);
-          navigate("/dashboard");
+        console.log(data);
+        if (data.token) {
+          window.localStorage.setItem("token", data.token);
+          navigate("/");
         } else {
-          setWrong(true);
           console.log("Password or username wrong");
         }
       })
       .catch((err) => {
+        console.log(err);
         if (err.message === "Network request failed") {
           console.log("Network ");
         } else {
@@ -107,7 +114,7 @@ const Login = () => {
           <p className="alert-wrong">Wrong Password Or Username !!!..</p>
         ) : null}
 
-        <button disabled ref={submitBtn} onClick={SubmitHandler} className="submit-btn">
+        <button ref={submitBtn} onClick={SubmitHandler} className="submit-btn">
           Submit
         </button>
       </div>
