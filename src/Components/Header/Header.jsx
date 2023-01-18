@@ -32,8 +32,8 @@ export default function Header() {
           </nav>
 
           <div className="btn_group">
-            <button className="order_btn">Order</button>
-            <button onClick={() => handleOpenModal()} className="order_modal_btn">
+            <button onClick={() => handleOpenModal()} className="order_btn">Order</button>
+            <button className="order_modal_btn">
               <span className="order_count">4</span>
               <img className="bag" src={bag} alt="Bag img" width="24" height="24" />
             </button>
