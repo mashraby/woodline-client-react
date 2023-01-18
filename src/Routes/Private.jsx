@@ -1,15 +1,13 @@
-import React, { useContext } from 'react';
-import { AuthTokenContext } from '../Contexts/AuthTokenContext/AuthTokenContext';
-import Home from '../Pages/Home/Home';
-import Login from '../Pages/Login/Login';
+import { Outlet } from "react-router-dom";
+import Login from "../Pages/Login/Login";
 
 const Private = () => {
-    const {token, setToken} = useContext(AuthTokenContext)
-    
-    if(token) {
-        return <Home />
+    const token = window.localStorage.getItem("token")
+    console.log(token);
+    if(!token) {
+        return <Login /> && (window.location.href = "/login")
     } else {
-        return <Login />
+        return <Outlet />
     }
 }
 

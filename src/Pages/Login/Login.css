@@ -90,6 +90,7 @@
 }
 
 .alert-wrong {
+  position: relative;
   width: 100%;
   padding: 5px;
   background-color: rgba(218, 100, 100, 0.795);
@@ -98,4 +99,12 @@
   color: white;
   margin-bottom: 15px;
   text-align: center;
+}
+
+.error-input {
+  border: 2px solid red;
+}
+
+.error-input::placeholder {
+  color: red;
 }
