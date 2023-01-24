@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider as OpenModalProvider } from "./Contexts/OrderModalContext/OrderModalContext";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:9000"
 
 const link = 'http://localhost:9000'
 
