@@ -3,7 +3,7 @@ import { OpenModalContext } from "../../Contexts/OrderModalContext/OrderModalCon
 import OrderCard from "../OrderCard/OrderCard";
 import "./OrderModal.css";
 
-export default function OrderModal() {
+export default function OrderModal({link}) {
 
   const { isOpenModal, setIsOpenModal } = useContext(OpenModalContext)
 
