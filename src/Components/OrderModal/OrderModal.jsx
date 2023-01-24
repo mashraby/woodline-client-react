@@ -3,9 +3,9 @@ import { OpenModalContext } from "../../Contexts/OrderModalContext/OrderModalCon
 import OrderCard from "../OrderCard/OrderCard";
 import "./OrderModal.css";
 
-export default function OrderModal() {
-  const { isOpenModal, setIsOpenModal, chooseTypes, chooseModels } =
-    useContext(OpenModalContext);
+export default function OrderModal({link}) {
+
+  const { isOpenModal, setIsOpenModal, chooseTypes, chooseModels } = useContext(OpenModalContext)
 
   const closeModal = () => {
     setIsOpenModal(false);

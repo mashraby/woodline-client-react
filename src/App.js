@@ -8,21 +8,21 @@ import Corzinka from "./Components/Corzinka/Corzinka";
 import Private from "./Routes/Private";
 import Public from "./Routes/Public";
 
-function App() {
+function App({link}) {
   return (
     <div className="App">
       <Routes>
 
-        <Route path="/" element={<Private />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/myprof" element={<MyProf />} />
-          <Route path="/corzinka" element={<Corzinka />} />
+        <Route path="/" element={<Private link={link} />}>
+          <Route path="/" element={<Home link={link} />} />
+          <Route path="/myprof" element={<MyProf link={link} />} />
+          <Route path="/corzinka" element={<Corzinka link={link} />} />
 
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/*" element={<NotFound link={link} />} />
         </Route>
 
-        <Route path="/" element={<Public />}>
-          <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Public link={link} />}>
+          <Route path="/login" element={<Login link={link} />} />
         </Route>
     </Routes>
     </div>

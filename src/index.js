@@ -7,12 +7,14 @@ import { Provider as OpenModalProvider } from "./Contexts/OrderModalContext/Orde
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:9000"
 
+const link = 'http://localhost:9000'
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <OpenModalProvider>
-        <App />
+        <App link={link} />
       </OpenModalProvider>
     </BrowserRouter>
   </React.StrictMode>
