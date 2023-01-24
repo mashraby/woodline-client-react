@@ -8,7 +8,7 @@ import OrderModal from "../../Components/OrderModal/OrderModal";
 import { OpenModalContext } from "../../Contexts/OrderModalContext/OrderModalContext";
 
 
-export default function Home() {
+export default function Home({link}) {
   const { isOpenModal, setIsOpenModal } = useContext(OpenModalContext);
 
   const closeModal = () => {
@@ -17,10 +17,10 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
-      <SearchBar />
-      <Table />
-      <OrderModal />
+      <Header link={link} />
+      <SearchBar link={link} />
+      <Table link={link} />
+      <OrderModal link={link} />
 
       <div
         onClick={() => closeModal()}
