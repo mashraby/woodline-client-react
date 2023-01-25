@@ -6,10 +6,14 @@ import { OpenModalContext } from "../../Contexts/OrderModalContext/OrderModalCon
 
 export default function Header() {
 
-  const { setIsOpenModal } = useContext(OpenModalContext)
+  const { setIsOpenModal, setIsOpenCorzinkaModal } = useContext(OpenModalContext)
 
   const handleOpenModal = () => {
     setIsOpenModal(true)
+  }
+
+  const openCorzinkaModal = () => {
+    setIsOpenCorzinkaModal(true)
   }
 
   return (
@@ -33,7 +37,7 @@ export default function Header() {
 
           <div className="btn_group">
             <button onClick={() => handleOpenModal()} className="order_btn">Order</button>
-            <button className="order_modal_btn">
+            <button onClick={() => openCorzinkaModal()} className="order_modal_btn">
               <span className="order_count">4</span>
               <img className="bag" src={bag} alt="Bag img" width="24" height="24" />
             </button>
