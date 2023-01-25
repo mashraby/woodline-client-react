@@ -1,13 +1,19 @@
 .order_modal {
   display: none;
+  position: relative;
+  margin-top: -300px;
+}
+
+.modal_contents {
+  position: absolute;
   padding: 40px;
-  position: fixed;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  transform: translateX(-50%);
   background-color: #fff;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   border-radius: 8px;
   z-index: 1000;
 }
@@ -88,4 +94,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+}
+
+.finish_btn {
+  margin-top: 56px;
+  display: block;
+  margin-left: auto;
+  border: none;
+  padding: 12px 56px;
+  background: #03c3ff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
 }

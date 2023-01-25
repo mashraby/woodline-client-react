@@ -2,10 +2,19 @@ import React from 'react';
 import "./Corzinka.css"
 import bagImg from "../../Assets/svg/Bag.svg"
 import CorzinkaCard from './Corzinka.Card';
+import { useContext } from 'react';
+import { OpenModalContext } from '../../Contexts/OrderModalContext/OrderModalContext';
 
 const Corzinka = () => {
+
+    const { isOpenCorzinkaModal, setIsOpenCorzinkaModal } = useContext(OpenModalContext)
+
+    const closeCorzinkaModal = () => {
+        setIsOpenCorzinkaModal(false)
+    }
+
     return (
-        <div className=" corzinka" >
+        <div style={{display: isOpenCorzinkaModal ? "block" : "none"}} className="corzinka" >
 
             <div className='container corzinka-container'>
                 <div className='corzinka-header'>
@@ -22,15 +31,19 @@ const Corzinka = () => {
                         </p>
                     </div>
 
-                    <div className="corzinka-close">
+                    <button onClick={() => closeCorzinkaModal()} className="corzinka-close">
                         <p className='corzinka-closeText'>Cancel</p>
-                        <button className='corzinka-closeBtn'>&#10005;</button>
-                    </div>
+                        <span className='corzinka-closeBtn'>&#10005;</span>
+                    </button>
                 </div>
 
                 <CorzinkaCard />
                 <CorzinkaCard />
                 <CorzinkaCard />
+
+                <button className='next_btn'>
+                    Next
+                </button>
             </div>
 
             <div className="backdrop"></div>

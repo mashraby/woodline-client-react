@@ -6,8 +6,11 @@ const OpenModalContext = createContext();
 
 function Provider({ children }) {
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isOpenCorzinkaModal, setIsOpenCorzinkaModal] = useState(false);
   const [chooseTypes, setChooseTypes] = useState([]);
   const [chooseModels, setChooseModels] = useState([]);
+
+  const [input, setInput] = useState("")
 
   useEffect(() => {
     axios.get("/types")
@@ -29,7 +32,11 @@ function Provider({ children }) {
         setIsOpenModal,
         setChooseTypes, 
         chooseTypes, 
-        chooseModels
+        chooseModels,
+        isOpenCorzinkaModal, 
+        setIsOpenCorzinkaModal,
+        input,
+        setInput
       }}
     >
       {children}
