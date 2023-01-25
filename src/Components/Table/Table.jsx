@@ -5,7 +5,9 @@ import "./Table.css";
 const Table = ({ data }) => {
   const { header, body } = data;
 
-  const { input } = useContext(OpenModalContext);
+  const { input, archiveOrders } = useContext(OpenModalContext);
+
+  console.log(archiveOrders);
 
   return (
     <div className="container">
@@ -22,7 +24,30 @@ const Table = ({ data }) => {
               })}
           </div>
 
-          {body && input === ""
+          {archiveOrders
+            ? body
+                .filter((e) => e.status === "REJECTED")
+                .map((e, i) => {
+                  return (
+                    <div key={i + 1} className="products-row">
+                      <div className="product-cell">
+                        <span>{e.id}</span>
+                      </div>
+                      <div className="product-cell">
+                        <span>{e.model}</span>
+                      </div>
+                      <div className="product-cell">
+                        <span className="cell-label">Category:</span>
+                        {e.delevr_date || e.myprof}
+                      </div>
+                      <div className="product-cell">
+                        <span className="cell-label">Status:</span>
+                        <span className={"status-rejected"}>{e.status}</span>
+                      </div>
+                    </div>
+                  );
+                })
+            : body && input === ""
             ? body.map((e, i) => {
                 return (
                   <div key={i + 1} className="products-row">
@@ -34,7 +59,7 @@ const Table = ({ data }) => {
                     </div>
                     <div className="product-cell">
                       <span className="cell-label">Category:</span>
-                      {e.delevr_date}
+                      {e.delevr_date || e.myprof}
                     </div>
                     <div className="product-cell">
                       <span className="cell-label">Status:</span>
@@ -42,7 +67,7 @@ const Table = ({ data }) => {
                         className={
                           e.status === "ACCEPTED"
                             ? "status-accepted"
-                            : e.status === "REJECTED"
+                            : e.status === ("REJECTED" || "UNACCEPTED")
                             ? "status-rejected"
                             : "status-progress"
                         }

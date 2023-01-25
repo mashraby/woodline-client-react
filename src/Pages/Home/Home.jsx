@@ -18,7 +18,7 @@ export default function Home({ link }) {
     isOpenCorzinkaModal,
     setIsOpenCorzinkaModal,
     userDataModal,
-    serUserDataModal,
+    setUserDataModal,
     coastModal
   } = useContext(OpenModalContext);
 
@@ -43,20 +43,26 @@ export default function Home({ link }) {
       delevr_date: "2022.09.17",
       status: "IN_PROGRESS",
     },
+    {
+      id: "842498",
+      model: "UDAR",
+      delevr_date: "2022.09.27",
+      status: "REJECTED",
+    },
   ]);
 
   const closeModal = () => {
     setIsOpenModal(false);
     setIsOpenCorzinkaModal(false);
-    serUserDataModal(false);
+    setUserDataModal(false);
   };
 
   return (
     <div>
-      <Header link={link} />
-      <SearchBar link={link} />
+      <Header />
+      <SearchBar />
       <Table data={{ header: headerData, body: orders }} link={link} />
-      <OrderModal link={link} />
+      <OrderModal />
       <Corzinka />
       <UserDataModal />
       <CoastModal />

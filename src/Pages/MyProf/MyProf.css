@@ -1,0 +1,23 @@
+.myProf_actions {
+  margin-top: 40px;
+  margin-bottom: 33px;
+}
+
+.myProf_actions_heading {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  color: #000000;
+}
+
+.myProf_actions_span {
+  padding: 8px 16px;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #389e0d;
+  background: #d9f7be;
+  border-radius: 8px;
+}
