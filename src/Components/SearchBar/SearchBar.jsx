@@ -6,7 +6,7 @@ import { OpenModalContext } from '../../Contexts/OrderModalContext/OrderModalCon
 
 export default function SearchBar() {
 
-    const { input, setInput } = useContext(OpenModalContext)
+    const { setInput, setArchiveOrders } = useContext(OpenModalContext)
 
     const archiveBtn = useRef()
     const orderBtn = useRef()
@@ -14,11 +14,13 @@ export default function SearchBar() {
     const activeOrders = () => {
         orderBtn.current.classList.remove("searchbar_btn_active")
         archiveBtn.current.classList.add("searchbar_btn_active")
+        setArchiveOrders(false)
     }
 
     const activeArchive = () => {
         archiveBtn.current.classList.remove("searchbar_btn_active")
         orderBtn.current.classList.add("searchbar_btn_active")
+        setArchiveOrders(true)
     }
 
 

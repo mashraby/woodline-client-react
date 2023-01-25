@@ -3,7 +3,6 @@ import Login from "../Pages/Login/Login";
 
 const Private = () => {
     const token = window.localStorage.getItem("token")
-    console.log(token);
     if(!token) {
         return <Login /> && (window.location.href = "/login")
     } else {
