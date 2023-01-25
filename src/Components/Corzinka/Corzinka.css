@@ -265,6 +265,7 @@
 }
 
 .next_btn {
+  cursor: pointer;
   margin-top: 56px;
   margin-bottom: 56px;
   display: block;

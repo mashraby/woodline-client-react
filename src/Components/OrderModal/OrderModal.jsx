@@ -4,12 +4,23 @@ import OrderCard from "../OrderCard/OrderCard";
 import "./OrderModal.css";
 
 export default function OrderModal({ link }) {
-  const { isOpenModal, setIsOpenModal, chooseTypes, chooseModels } =
-    useContext(OpenModalContext);
+  const {
+    isOpenModal,
+    setIsOpenModal,
+    chooseTypes,
+    chooseModels,
+    isOpenCorzinkaModal,
+    setIsOpenCorzinkaModal,
+  } = useContext(OpenModalContext);
 
   const closeModal = () => {
     setIsOpenModal(false);
   };
+
+  const clickFinishBtn = () => {
+    setIsOpenCorzinkaModal(!isOpenCorzinkaModal)
+    setIsOpenModal(!isOpenModal)
+  }
 
   return (
     <div
@@ -66,7 +77,7 @@ export default function OrderModal({ link }) {
           <OrderCard />
         </div>
 
-        <button className="finish_btn">Finish</button>
+        <button onClick={() => clickFinishBtn()} className="finish_btn">Finish</button>
       </div>
     </div>
   );

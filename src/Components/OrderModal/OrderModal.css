@@ -97,6 +97,7 @@
 }
 
 .finish_btn {
+  cursor: pointer;
   margin-top: 56px;
   display: block;
   margin-left: auto;

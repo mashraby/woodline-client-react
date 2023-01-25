@@ -20,9 +20,6 @@ const Table = ({ data }) => {
                   </div>
                 );
               })}
-            {/* <div className="product-cell image t-center">Model</div>
-            <div className="product-cell category t-center">Delivery date</div>
-            <div className="product-cell stock t-center">Status</div> */}
           </div>
 
           {body && input === ""
@@ -94,38 +91,6 @@ const Table = ({ data }) => {
                     </div>
                   );
                 })}
-          {/* <div className="products-row">
-            <div className="product-cell">
-              <span>358832</span>
-            </div>
-            <div className="product-cell">
-              <span>Zo'r Model</span>
-            </div>
-            <div className="product-cell">
-              <span className="cell-label">Category:</span>
-              Salom
-            </div>
-            <div className="product-cell">
-              <span className="cell-label">Status:</span>
-              <span className="status-progress">In progress</span>
-            </div>
-          </div> */}
-          {/* <div className="products-row">
-            <div className="product-cell">
-              <span>358832</span>
-            </div>
-            <div className="product-cell">
-              <span>Salom</span>
-            </div>
-            <div className="product-cell">
-              <span className="cell-label">Category:</span>
-              Salom
-            </div>
-            <div className="product-cell">
-              <span className="cell-label">Status:</span>
-              <span className="status-rejected">Rejected</span>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

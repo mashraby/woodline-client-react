@@ -6,6 +6,7 @@ import MyProf from "./Pages/MyProf/MyProf";
 import Login from "./Pages/Login/Login";
 import Private from "./Routes/Private";
 import Public from "./Routes/Public";
+import UserDataModal from "./Components/UserDataModal/UserDataModal";
 
 function App({link}) {
   return (
