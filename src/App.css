@@ -71,3 +71,15 @@
 button {
   cursor: pointer;
 }
+
+.backdrop {
+  display: none;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(201, 201, 201, 0.2);
+  backdrop-filter: blur(16px);
+  cursor: pointer;
+}
