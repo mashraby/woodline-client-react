@@ -19,7 +19,7 @@ export default function Home({ link }) {
     setIsOpenCorzinkaModal,
     userDataModal,
     setUserDataModal,
-    coastModal
+    coastModal,
   } = useContext(OpenModalContext);
 
   const headerData = ["ID", "MODEL", "DELIVERY DATE", "STATUS"];
@@ -61,7 +61,7 @@ export default function Home({ link }) {
     <div>
       <Header />
       <SearchBar />
-      <Table data={{ header: headerData, body: orders }} link={link} />
+      <Table data={{ header: headerData, body: orders }} />
       <OrderModal />
       <Corzinka />
       <UserDataModal />
@@ -70,7 +70,10 @@ export default function Home({ link }) {
       <div
         onClick={() => closeModal()}
         style={
-          isOpenModal || isOpenCorzinkaModal || userDataModal || coastModal === true
+          isOpenModal ||
+          isOpenCorzinkaModal ||
+          userDataModal ||
+          coastModal === true
             ? { display: "block" }
             : { display: "none" }
         }

@@ -6,24 +6,25 @@ import MyProf from "./Pages/MyProf/MyProf";
 import Login from "./Pages/Login/Login";
 import Private from "./Routes/Private";
 import Public from "./Routes/Public";
-import UserDataModal from "./Components/UserDataModal/UserDataModal";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
-function App({link}) {
+function App() {
   return (
     <div className="App">
+      <ToastContainer autoClose={3000} />
       <Routes>
+        <Route path="/" element={<Private />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/myprof" element={<MyProf />} />
 
-        <Route path="/" element={<Private link={link} />}>
-          <Route path="/" element={<Home link={link} />} />
-          <Route path="/myprof" element={<MyProf link={link} />} />
-
-          <Route path="/*" element={<NotFound link={link} />} />
+          <Route path="/*" element={<NotFound />} />
         </Route>
 
-        <Route path="/" element={<Public link={link} />}>
-          <Route path="/login" element={<Login link={link} />} />
+        <Route path="/" element={<Public />}>
+          <Route path="/login" element={<Login />} />
         </Route>
-    </Routes>
+      </Routes>
     </div>
   );
 }
